@@ -11,8 +11,8 @@ const MainTaskSchema = new mongoose.Schema({
         type: String,
         minLength: [3, 'Description must be at least 3 characters.']
     },
-    subTask: {
-        type: [{ type: mongoose.ObjectId, ref: "SubTask"}]
+    subTasks: {
+        type: [{ type: mongoose.ObjectId, ref: "SubTask" }],
     },
     projectId: {type: mongoose.ObjectId, ref: "Project"}
 }, { timestamps: true }

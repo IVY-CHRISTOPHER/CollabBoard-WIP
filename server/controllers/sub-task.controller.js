@@ -7,7 +7,7 @@ module.exports.addSubTask = async (req, res) => {
         const newSubTask = await SubTask.create(req.body);
         //After creating the sub-task, add it to the main-tasks DB
         const updatedMainTask = await MainTask.findByIdAndUpdate(newSubTask.MainTaskId, {
-            $addToSet: { subTask: newSubTask._id }
+            $addToSet: { subTasks: newSubTask._id }
         });
         res.json(newSubTask);
     }
