@@ -1,8 +1,8 @@
-const Project = require('../models/project.model');
-const User = require('../models/user.model');
-const jwt = require('../config/jwt.config')
+import Project from '../models/project.model';
+import User from '../models/user.model';
+import jwt from '../config/jwt.config';
 
-module.exports.addProject = async (req, res) => {
+export async function addProject(req, res) {
     try {
         // Creates a new project
         const newProject = await Project.create(req.body);
@@ -15,10 +15,10 @@ module.exports.addProject = async (req, res) => {
     catch (err) {
         res.status(400).json({ message: "Error Adding Project", error: err })
     }
-};
+}
 
 //Finds all Projects
-module.exports.findAllProjects = async (req, res) => {
+export async function findAllProjects(req, res) {
     Project.find()
         .then((allProjects) => {
             res.json(allProjects)

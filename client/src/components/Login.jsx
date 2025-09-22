@@ -23,7 +23,7 @@ const Login = (props) => {
 
     const submitHandler = e => {
         e.preventDefault()
-        axios.post('http://localhost:8004/api/user/login', userData, {withCredentials: true})
+        axios.post('http://localhost:3000/api/user/login', userData, {withCredentials: true})
         .then( res => {
             setUser(res.data)
             navigate('/home')
@@ -79,7 +79,7 @@ const Login = (props) => {
                 <input type="submit" value="Login" /> 
             </form>
 
-            <p>Dont have an Account?
+            <p>Don't have an Account?
                 <Link to={'/register'}> Register</Link>
             </p>
         </div>

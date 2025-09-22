@@ -1,7 +1,7 @@
-const SubTask = require('../models/sub-task.model');
-const MainTask = require('../models/main-task.model');
+import SubTask from '../models/sub-task.model';
+import MainTask from '../models/main-task.model';
 
-module.exports.addSubTask = async (req, res) => {
+export async function addSubTask(req, res) {
     try {
         // Creates the new Sub-Task
         const newSubTask = await SubTask.create(req.body);
@@ -14,10 +14,10 @@ module.exports.addSubTask = async (req, res) => {
     catch (err) {
         res.status(400).json({ message: "Error Adding Sub Task", error: err })
     }
-};
+}
 
 // Finds all Sub-Tasks
-module.exports.findAllSubTasks = async (req, res) => {
+export async function findAllSubTasks(req, res) {
     SubTask.find()
         .then((allSubTasks) => {
             res.json(allSubTasks)
@@ -25,4 +25,4 @@ module.exports.findAllSubTasks = async (req, res) => {
         .catch((err) => {
             res.status(400).json({ message: "Error finding all Sub Tasks", error: err })
         });
-};
+}

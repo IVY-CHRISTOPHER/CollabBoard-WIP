@@ -1,10 +1,10 @@
-const mongoose = require('mongoose')
-const { isEmail } = require('validator')
-const argon2 = require('argon2')
+import { Schema, ObjectId, model } from 'mongoose';
+import { isEmail } from 'validator';
+import { hash as _hash } from 'argon2';
 
 //User Schema for DB
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
     userName: {
         type: String,
         required: [true, 'Username is required.'],
@@ -30,7 +30,10 @@ const UserSchema = new mongoose.Schema({
         required: [true, 'Error loading userModel - User has no roles']
     },
     projects: {
-        type: [{type: mongoose.ObjectId, ref: "Project"}]
+        type: [{
+            type: ObjectId,
+            ref: "Project"
+        }]
     }
 },
     { timestamps: true }
@@ -52,14 +55,14 @@ UserSchema.pre("validate", function (next) {
 //Hashing Password
 UserSchema.pre("save", async function (next) {
     try {
-        const hash = await argon2.hash("password");
+        const hash = await _hash("password");
         this.password = hash
-        }
+    }
     catch (err) {
         console.log(err)
     }
     next()
 });
 
-module.exports = mongoose.model("User", UserSchema);
+export default model("User", UserSchema);
 

@@ -1,14 +1,14 @@
-const SubTaskController = require('../controllers/sub-task.controller');
-const { authenticate } = require('../config/jwt.config')
+import { addSubTask, findAllSubTasks } from '../controllers/sub-task.controller';
+import { authenticate } from '../config/jwt.config';
 
-module.exports = app => {
+export default app => {
     // Route to create sub task
-    app.post('/api/sub-tasks',
+    app.post('/api/sub-task/create',
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        SubTaskController.addSubTask
+        addSubTask
     );
     app.get('/api/sub-tasks',
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        SubTaskController.findAllSubTasks
+        findAllSubTasks
     );
 }

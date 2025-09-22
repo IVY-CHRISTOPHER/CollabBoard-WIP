@@ -1,7 +1,7 @@
-const MainTask = require('../models/main-task.model');
-const Project = require('../models/project.model');
+import MainTask from '../models/main-task.model';
+import Project from '../models/project.model';
 
-module.exports.addMainTask = async (req, res) => {
+export async function addMainTask(req, res) {
     try {
         //Creates a new main task
         const newMainTask = await MainTask.create(req.body);
@@ -14,10 +14,10 @@ module.exports.addMainTask = async (req, res) => {
     catch (err) {
         res.status(400).json({ message: "Error Adding Main Task", error: err })
     }
-};
+}
 
 //Finds all Main Tasks
-module.exports.findAllMainTasks = async (req, res) => {
+export async function findAllMainTasks(req, res) {
     MainTask.find()
         .then((allMainTasks) => {
             res.json(allMainTasks)
@@ -25,4 +25,4 @@ module.exports.findAllMainTasks = async (req, res) => {
         .catch((err) => {
             res.status(400).json({ message: "Error finding all Main Tasks", error: err })
         });
-};
+}

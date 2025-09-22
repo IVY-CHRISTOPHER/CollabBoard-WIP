@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import { Schema, ObjectId, model } from 'mongoose';
 
-const SubTaskSchema = new mongoose.Schema({
+const SubTaskSchema = new Schema({
     subTaskName: {
         type: String,
         required: [true, 'Task name is required.'],
@@ -34,10 +34,13 @@ const SubTaskSchema = new mongoose.Schema({
         enum: ["to-do", "in-progress", "done"],
         required: [true]
     },
-    mainTaskId: { type: mongoose.ObjectId, ref: "MainTask" }
+    mainTaskId: {
+        type: ObjectId,
+        ref: "MainTask"
+    }
 }, { timestamps: true }
 );
 
-SubTask = mongoose.model('Task', SubTaskSchema);
+SubTask = model('Task', SubTaskSchema);
 
-module.exports = SubTask
+export default SubTask

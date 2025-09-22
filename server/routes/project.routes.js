@@ -1,15 +1,15 @@
-const ProjectController = require('../controllers/project.controller');
-const { authenticate } = require('../config/jwt.config')
+import { addProject, findAllProjects } from '../controllers/project.controller';
+import { authenticate } from '../config/jwt.config';
 
-module.exports = app => {
+export default app => {
     //Add owned Projects -> userId included in req.body by middleware
-    app.post('/api/projects',
+    app.post('/api/projects/create',
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        ProjectController.addProject
+        addProject
     );
     //Get all Projects
     app.get('/api/projects',
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        ProjectController.findAllProjects
+        findAllProjects
     );
 }
