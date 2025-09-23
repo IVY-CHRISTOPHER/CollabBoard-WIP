@@ -1,5 +1,5 @@
-import MainTask from '../models/main-task.model';
-import Project from '../models/project.model';
+import MainTask from '../models/main-task.model.js';
+import Project from '../models/project.model.js';
 
 export async function addMainTask(req, res) {
     try {

@@ -1,6 +1,7 @@
-import User from '../models/user.model';
+import User from '../models/user.model.js';
 const secret = process.env.SECRET_KEY;
-import { sign } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
+const { sign } = jwt;
 import { verify } from 'argon2';
 
 export async function registerUser(req, res) {

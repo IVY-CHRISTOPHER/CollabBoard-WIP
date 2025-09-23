@@ -1,5 +1,5 @@
-import { LoginUser, logoutUser } from '../controllers/user.controller';
-import { registerUser, findAllUsers } from '../controllers/user.controller';
+import { LoginUser, logoutUser } from '../controllers/user.controller.js';
+import { registerUser, findAllUsers } from '../controllers/user.controller.js';
 
 export default app => {
     //Register/Login/Logout user

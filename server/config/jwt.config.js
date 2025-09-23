@@ -1,4 +1,5 @@
-import { verify } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
+const { verify } = jwt;
 const secret = process.env.SECRET_KEY;
 
 export function authenticate(req, res, next) {

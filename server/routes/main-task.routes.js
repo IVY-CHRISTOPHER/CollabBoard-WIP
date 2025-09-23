@@ -1,5 +1,5 @@
-import { addMainTask, findAllMainTasks } from '../controllers/main-task.controller';
-import { authenticate } from '../config/jwt.config';
+import { addMainTask, findAllMainTasks } from '../controllers/main-task.controller.js';
+import { authenticate } from '../config/jwt.config.js';
 
 export default app => {
     // Route to create Main task

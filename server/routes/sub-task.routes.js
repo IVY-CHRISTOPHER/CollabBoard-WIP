@@ -1,5 +1,5 @@
-import { addSubTask, findAllSubTasks } from '../controllers/sub-task.controller';
-import { authenticate } from '../config/jwt.config';
+import { addSubTask, findAllSubTasks } from '../controllers/sub-task.controller.js';
+import { authenticate } from '../config/jwt.config.js';
 
 export default app => {
     // Route to create sub task

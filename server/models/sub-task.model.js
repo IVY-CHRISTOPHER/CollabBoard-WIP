@@ -41,6 +41,4 @@ const SubTaskSchema = new Schema({
 }, { timestamps: true }
 );
 
-SubTask = model('Task', SubTaskSchema);
-
-export default SubTask
+export default model('Task', SubTaskSchema);

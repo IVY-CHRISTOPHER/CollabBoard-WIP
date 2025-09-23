@@ -1,6 +1,5 @@
-import Project from '../models/project.model';
-import User from '../models/user.model';
-import jwt from '../config/jwt.config';
+import Project from '../models/project.model.js';
+import User from '../models/user.model.js';
 
 export async function addProject(req, res) {
     try {

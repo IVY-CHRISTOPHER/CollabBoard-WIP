@@ -1,8 +1,8 @@
-require('dotenv').config();
+import {} from "dotenv/config"
 console.log("SECRET_KEY:", process.env.SECRET_KEY);
 console.log("SERVER_PORT: ", process.env.SERVER_PORT)
-import "./config/mongoose.config";
-import './config/jwt.config';
+import "./config/mongoose.config.js";
+import './config/jwt.config.js';
 
 import express, { json, urlencoded } from "express";
 import cors from "cors";
@@ -15,13 +15,13 @@ app.use(cookieParser());
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(json(), urlencoded({ extended: true }));
 
-import UserRoutes from './routes/user.routes';
+import UserRoutes from './routes/user.routes.js';
 UserRoutes(app)
-import ProjectRoutes from './routes/project.routes';
+import ProjectRoutes from './routes/project.routes.js';
 ProjectRoutes(app)
-import MainTaskRoutes from './routes/main-task.routes';
+import MainTaskRoutes from './routes/main-task.routes.js';
 MainTaskRoutes(app)
-import SubTaskRoutes from './routes/sub-task.routes';
+import SubTaskRoutes from './routes/sub-task.routes.js';
 SubTaskRoutes(app)
 
 app.listen(port, () => console.log(`server live on port ${port}`));

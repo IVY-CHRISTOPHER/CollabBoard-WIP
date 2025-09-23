@@ -24,6 +24,4 @@ const MainTaskSchema = new Schema({
 }, { timestamps: true }
 );
 
-MainTask = model('MainTask', MainTaskSchema);
-
-export default MainTask;
+export default model('MainTask', MainTaskSchema);

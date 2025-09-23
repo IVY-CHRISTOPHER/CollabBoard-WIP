@@ -37,6 +37,4 @@ const ProjectSchema = new Schema({
     { timestamps: true }
 );
 
-Project = model("Project", ProjectSchema);
-
-export default Project;
+export default model("Project", ProjectSchema);

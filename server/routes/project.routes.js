@@ -1,5 +1,5 @@
-import { addProject, findAllProjects } from '../controllers/project.controller';
-import { authenticate } from '../config/jwt.config';
+import { addProject, findAllProjects } from '../controllers/project.controller.js';
+import { authenticate } from '../config/jwt.config.js';
 
 export default app => {
     //Add owned Projects -> userId included in req.body by middleware
