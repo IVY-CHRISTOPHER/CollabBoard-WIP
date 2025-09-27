@@ -24,7 +24,7 @@ const Login = (props) => {
 
     const submitHandler = e => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/user/login', userData, {withCredentials: true})
+        axios.post('http://localhost:3000/api/user/login', userData, {withCredentials: true})
         .then( res => {
             setUser(res.data)
             navigate('/home')
@@ -70,7 +70,7 @@ const Login = (props) => {
                     
                     <br></br>
 
-                    <label className='block'>
+                    <label className='block mt-2'>
                         Password
                     </label>
                     <input 
