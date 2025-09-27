@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 const { verify } = jwt;
 const secret = process.env.SECRET_KEY;
 
@@ -7,8 +7,7 @@ export function authenticate(req, res, next) {
     verify(req.cookies.userToken, secret, (err, payload) => {
         if (err) {
             res.status(401).json({ verified: false });
-        }
-        else {
+        } else {
             console.log("config/jwt.config.js - Line 11", payload);
             next();
         }
