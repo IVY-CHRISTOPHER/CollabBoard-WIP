@@ -44,11 +44,11 @@ export async function LoginUser(req, res) {
     //Populate the users projects with projects in the users projects array
     const potentialUser = await User.findOne({ email: req.body.email });
     console.log("Found user:", potentialUser);
-    console.log("Hashed Password: ", potentialUser.password);
     //If user exists compare passwords
     if (potentialUser) {
         if (await verify(potentialUser.password, req.body.password)) {
-            console.log("Password match:");
+            console.log("Password match: ");
+            console.log("Hashed Password: ", potentialUser.password);
             // Create token on password match
             const userToken = sign(
                 { _id: potentialUser._id, username: potentialUser.userName },
