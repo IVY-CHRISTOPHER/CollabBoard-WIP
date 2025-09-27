@@ -1,10 +1,20 @@
-const mongoose = require('mongoose')
-const { isEmail } = require('validator')
-const argon2 = require('argon2')
+import { Schema, ObjectId, model } from 'mongoose';
+import  isEmail  from 'validator/lib/isEmail.js';
+import { hash as _hash } from 'argon2';
 
 //User Schema for DB
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
+    firstName: {
+        type: String,
+        required: [true, 'Must enter First Name'],
+        trim: [true]
+    },
+    lastName: {
+        type: String,
+        required: [true, 'Must enter Last Name'],
+        trim: [true]
+    },
     userName: {
         type: String,
         required: [true, 'Username is required.'],
@@ -25,12 +35,16 @@ const UserSchema = new mongoose.Schema({
         minLength: [8, 'Password must be at least 8 characters.'],
         trim: [true]
     },
-    roles: {
-        type: [],
-        required: [true, 'Error loading userModel - User has no roles']
-    },
+    //TODO: Add roles to users to allow them to have specific permissions.
+    // roles: {
+    //     type: [],
+    //     required: [true, 'Error loading userModel - User has no roles']
+    // },
     projects: {
-        type: [{type: mongoose.ObjectId, ref: "Project"}]
+        type: [{
+            type: ObjectId,
+            ref: "Project"
+        }]
     }
 },
     { timestamps: true }
@@ -38,12 +52,17 @@ const UserSchema = new mongoose.Schema({
 
 // Using Argon2 (Argon2id(default)) for password encryption / MIDDLEWARE
 UserSchema.virtual("confirmPassword")
-    .get(() => this.confirmPassword)
-    .set((value) => (this.confirmPassword = value));
+    .get(function () {
+        return this._confirmPassword
+    })
+        
+    .set(function (value) {
+        return this._confirmPassword = value
+    });
 
 // Comparing passwords
 UserSchema.pre("validate", function (next) {
-    if (this.password !== this.confirmPassword) {
+    if (this.password !== this._confirmPassword) {
         this.invalidate("confirmPassword", 'passwords must match');
     }
     next();
@@ -52,14 +71,16 @@ UserSchema.pre("validate", function (next) {
 //Hashing Password
 UserSchema.pre("save", async function (next) {
     try {
-        const hash = await argon2.hash("password");
-        this.password = hash
+        if (this.isModified("password")) {
+            this.password = await _hash(this.password)
         }
+        next();
+    }
     catch (err) {
         console.log(err)
     }
     next()
 });
 
-module.exports = mongoose.model("User", UserSchema);
+export default model("User", UserSchema);
 

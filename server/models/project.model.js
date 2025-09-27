@@ -1,8 +1,8 @@
-const mongoose = require('mongoose')
+import { Schema, ObjectId, model } from 'mongoose';
 
 
 //Creates a new MongoDB Schema named "ProjectSchema"
-const ProjectSchema = new mongoose.Schema({
+const ProjectSchema = new Schema({
     projectName: {
         type: String,
         required: [true, 'Project name is required.'],
@@ -10,7 +10,10 @@ const ProjectSchema = new mongoose.Schema({
         trim: [true]
     },
     mainTasks: {
-        type: [{ type: mongoose.ObjectId, ref: "MainTask" }],
+        type: [{
+            type: ObjectId,
+            ref: "MainTask"
+        }],
         //TODO Creating a project with tutorial tasks inside it.
         // default: [
         //     {
@@ -26,11 +29,12 @@ const ProjectSchema = new mongoose.Schema({
         //     }
         // ]
     },
-    userId: { type: mongoose.ObjectId, ref: "User" }
+    userId: {
+        type: ObjectId,
+        ref: "User"
+    }
 },
     { timestamps: true }
 );
 
-Project = mongoose.model("Project", ProjectSchema);
-
-module.exports = Project;
+export default model("Project", ProjectSchema);

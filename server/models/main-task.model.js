@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import { Schema, ObjectId, model } from 'mongoose';
 
-const MainTaskSchema = new mongoose.Schema({
+const MainTaskSchema = new Schema({
     mainTaskName: {
         type: String,
         required: [true, 'Main Task Name is required.'],
@@ -12,12 +12,16 @@ const MainTaskSchema = new mongoose.Schema({
         minLength: [3, 'Description must be at least 3 characters.']
     },
     subTasks: {
-        type: [{ type: mongoose.ObjectId, ref: "SubTask" }],
+        type: [{
+            type: ObjectId,
+            ref: "SubTask"
+        }],
     },
-    projectId: {type: mongoose.ObjectId, ref: "Project"}
+    projectId: {
+        type: ObjectId,
+        ref: "Project"
+    }
 }, { timestamps: true }
 );
 
-MainTask = mongoose.model('MainTask', MainTaskSchema);
-
-module.exports = MainTask;
+export default model('MainTask', MainTaskSchema);

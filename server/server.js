@@ -1,26 +1,27 @@
-require('dotenv').config();
+import {} from "dotenv/config"
 console.log("SECRET_KEY:", process.env.SECRET_KEY);
-require("./config/mongoose.config");
-require('./config/jwt.config');
+console.log("SERVER_PORT: ", process.env.SERVER_PORT)
+import "./config/mongoose.config.js";
+import './config/jwt.config.js';
 
-const express = require("express");
-const cors = require("cors");
+import express, { json, urlencoded } from "express";
+import cors from "cors";
 const app = express();
-const cookieParser = require("cookie-parser");
-const port = 8000;
+import cookieParser from "cookie-parser";
+const port = process.env.SERVER_PORT;
 
 
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
-app.use(express.json(), express.urlencoded({ extended: true }));
+app.use(json(), urlencoded({ extended: true }));
 
-const UserRoutes = require('./routes/user.routes')
+import UserRoutes from './routes/user.routes.js';
 UserRoutes(app)
-const ProjectRoutes = require('./routes/project.routes')
+import ProjectRoutes from './routes/project.routes.js';
 ProjectRoutes(app)
-const MainTaskRoutes = require('./routes/main-task.routes')
+import MainTaskRoutes from './routes/main-task.routes.js';
 MainTaskRoutes(app)
-const SubTaskRoutes = require('./routes/sub-task.routes')
+import SubTaskRoutes from './routes/sub-task.routes.js';
 SubTaskRoutes(app)
 
 app.listen(port, () => console.log(`server live on port ${port}`));

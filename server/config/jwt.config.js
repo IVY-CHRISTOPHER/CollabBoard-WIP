@@ -1,9 +1,10 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
+const { verify } = jwt;
 const secret = process.env.SECRET_KEY;
 
-module.exports.authenticate = (req, res, next) => {
+export function authenticate(req, res, next) {
     console.log("config/jwt.config.js - Line 5", req.cookies);
-    jwt.verify(req.cookies.userToken, secret, (err, payload) => {
+    verify(req.cookies.userToken, secret, (err, payload) => {
         if (err) {
             res.status(401).json({ verified: false });
         }
