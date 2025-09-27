@@ -7,13 +7,15 @@ const Registration = (props) => {
     const {user, setUser} = useContext(userContext)
     const navigate = useNavigate()
     const [userData, setUserData] = useState({
-        userName: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
         confirmPassword: ""
     })
     const [userErrors, setUserErrors] = useState({
-        userName: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
         confirmPassword: ""
@@ -27,7 +29,7 @@ const Registration = (props) => {
 
     const submitHandler = e => {
         e.preventDefault()
-        axios.post('http://localhost:8004/api/user/register',userData, {withCredentials: true})
+        axios.post('http://localhost:8000/api/user/register',userData, {withCredentials: true})
         .then( res => {
             setUser(res.data)
             navigate('/home')
@@ -37,7 +39,8 @@ const Registration = (props) => {
 
     const validateRegistration = (name, value) => {
         const validations = {
-            userName : value => value.length >= 3 ? true : 'User Name must be at least 3 characters',
+            firstName : value => value.length >= 1 ? true : 'First name is required',
+            lastName : value => value.length >= 1 ? true : 'Last name is required',
             email : value => value.match(/[^\s@]+@[^\s@]+\.[^\s@]+/gi) ? true : 'Please enter a valid email address',
             password : value => value.length >= 8 ? true : 'Password must be at least 8 characters',
             confirmPassword : (value) => { 
@@ -57,7 +60,7 @@ const Registration = (props) => {
             
             <hr />
 
-            <form>
+            <form onSubmit={submitHandler}>
                 <label>
                     User Name
                     <input 
