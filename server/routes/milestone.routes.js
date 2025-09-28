@@ -1,20 +1,19 @@
 import {
-    addProject,
-    findAllProjects,
-} from "../controllers/project.controller.js";
+    addMilestone,
+    findAllMilestones,
+} from "../controllers/milestone.controller.js";
 import { authenticate } from "../config/jwt.config.js";
 
 export default (app) => {
-    //Add owned Projects -> userId included in req.body by middleware
+    // Route to create Milestone
     app.post(
-        "/api/projects/create",
+        "/api/create",
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        addProject
+        addMilestone
     );
-    //Get all Projects
     app.get(
-        "/api/projects",
+        "/api/Milestones",
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
-        findAllProjects
+        findAllMilestones
     );
 };

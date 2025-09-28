@@ -29,7 +29,7 @@ const Registration = (props) => {
 
     const submitHandler = e => {
         e.preventDefault()
-        axios.post('http://localhost:3000/api/user/register',userData, {withCredentials: true})
+        axios.post('http://localhost:3000/api/register',userData, {withCredentials: true})
         .then( res => {
             setUser(res.data)
             navigate('/home')
