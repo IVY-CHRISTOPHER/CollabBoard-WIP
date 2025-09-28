@@ -5,13 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      'dkblue' : '#001381',
-      'white': '#ffffff',
-      'errormsg' : '#e11d48',
-      'disabledGray' : "#ECF0FF"
+    extend: {
+      // this is for custom added colors, you need it in the Extend section here so the tailwind base set colors still work
+      colors: {
+      'blueberry' : '#001381',
+      'strawberry' : '#e11d48',
+      'disabledGray' : "#ECF0FF",
+      'orangeCream' : "#FDBA74"
+
     }
+    },
+    
+    
   },
   plugins: [],
 }

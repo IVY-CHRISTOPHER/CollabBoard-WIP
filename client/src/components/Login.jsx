@@ -45,10 +45,14 @@ const Login = (props) => {
     return (
         <div className='flex h-screen' >
 
-            <div className='flex flex-col flex-1 items-center justify-center w-full'>
+            <div className='flex flex-col flex-1 items-center md:justify-center w-full'>
+
+                <img src="src\assets\logo.png" alt="Logo" className='w-2/12 object-fit '/>
 
                 <div className='w-2/3 bg-disabledGray border-1 rounded-md mb-10'>
-                    <button className='w-1/2 bg-dkblue rounded-md text-white'>Register</button>
+                    <button className='w-1/2 bg-blueberry rounded-md text-white'>
+                        <Link to={'/register'}>Register</Link>
+                    </button>
                     <button className='w-1/2'>Login</button>
                 </div>
                 
@@ -66,7 +70,7 @@ const Login = (props) => {
                         placeholder='Email@example.com' 
                         className='w-full border-2 rounded-md '
                     />
-                    <p className='text-errormsg'>{userErrors.email}</p>
+                    <p className='text-strawberry'>{userErrors.email}</p>
                     
                     <br></br>
 
@@ -81,21 +85,44 @@ const Login = (props) => {
                         placeholder='at least 8 characters' 
                         className='w-full border-2 rounded-md '
                     />
-                    <p className='text-errormsg'>{userErrors.password}</p>
+                    <p className='text-strawberry'>{userErrors.password}</p>
 
                     <br></br>
-                    
-                    <input type="submit" value="Login" className='w-full rounded-md bg-dkblue py-2 px-4 text-white' /> 
-                </form>
 
+                    <p className='text-right'>
+                        <Link to={'/forgotPassword'} className='text-blue-400 hover:text-blue-800 underline m-1 '>Forgot Password?</Link>
+                    </p>
+
+                    <input type="submit" value="Login" className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-1' /> 
+                </form>
+                
+
+                <div class="relative flex py-5 items-center w-2/3">
+                    <hr class="flex-grow border-t border-gray-400"/>
+                    <span class="flex-shrink mx-4 text-black"> or </span>
+                    <hr class="flex-grow border-t border-gray-400"/>
+                </div>
+
+                <button class="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-black hover:bg-orangeCream">
+                    <img class="w-6 h-6" src="src\assets\google-color.svg" alt="google logo"/>
+                    <p>Login with Google</p>
+                </button>
+
+                <button class=" mt-2 px-4 py-2 border flex gap-2 border-slate-200  rounded-lg text-black hover:bg-orangeCream">
+                    <img class="w-6 h-6" src="src\assets\facebook-official.svg" alt="facebook logo"/>
+                    <p>Login with Facebook</p>
+                </button>
+                
                 <p className='mt-2'>Dont have an Account? 
-                    <Link to={'/register'} className='text-blue-600 hover:text-blue-800 underline ml-1'>Register</Link>
+                    <Link to={'/register'} className='text-blue-400 hover:text-blue-600 underline ml-1'>Register</Link>
                 </p>
+
             </div>
 
             <div className='flex-1 h-full'>
                 <img src="src\assets\LoginPic.jpg" alt="Login Picture"  className='h-full w-full object-cover'/>
             </div>
+
 
         </div>
     )
