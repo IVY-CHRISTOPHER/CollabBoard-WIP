@@ -71,12 +71,13 @@ const Registration = (props) => {
                 <hr />
 
                 <form onSubmit={submitHandler} className='w-2/3'>
-                    <label className='block'>
+                    <label for='firstName' className='block'>
                         First Name
                     </label>
                     <input 
                         type="text" 
                         name='firstName'
+                        id='firstName'
                         value={userData.firstName}
                         onChange={changeHandler}
                         placeholder='Type in users name'
@@ -84,12 +85,13 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.firstName}</p>
 
-                    <label className='block mt-2'>
+                    <label for='lastName' className='block mt-2'>
                         Last Name
                     </label>
                     <input 
                         type="text" 
                         name='lastName'
+                        id='lastName'
                         value={userData.lastName}
                         onChange={changeHandler}
                         placeholder='Type in users name'
@@ -97,12 +99,13 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.lastName}</p>
 
-                    <label className='block mt-2'>
+                    <label for='email' className='block mt-2'>
                         Email
                     </label>
                     <input 
                         type="email"
                         name='email'
+                        id='email'
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Example@email.com'
@@ -110,12 +113,13 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
 
-                    <label className='block mt-2'>
+                    <label for='password' className='block mt-2'>
                         Password
                     </label>
                     <input 
                         type="password"
                         name='password'
+                        id='password'
                         value={userData.password}
                         onChange={changeHandler}
                         placeholder='At least 8 characters'
@@ -123,12 +127,13 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.password}</p>
 
-                    <label className='block mt-2'>
+                    <label for='confirmPassword' className='block mt-2'>
                         Confirm Password
                     </label>
                     <input 
                         type="password"
                         name='confirmPassword'
+                        id='confirmPassword'
                         value={userData.confirmPassword}
                         onChange={changeHandler}
                         placeholder='Confirm Password'
@@ -141,7 +146,11 @@ const Registration = (props) => {
                         <Link to={'/termsOfService'} className='text-blue-500 hover:text-blue-800 underline ml-1'>Terms Of Service</Link>
                     </p>
 
-                    <input type="submit" value="Register" className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2' />
+                    <input 
+                        type="submit" 
+                        value="Register" 
+                        className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2' 
+                    />
                 </form>
 
                 <br></br>
@@ -161,7 +170,7 @@ const Registration = (props) => {
                     <img class="w-6 h-6" src="src\assets\facebook-official.svg" alt="facebook logo"/>
                     <p>Continue with Facebook</p>
                 </button>
-
+                
                 <p>
                     Already have an account?
                     <Link to={'/'} className='text-blue-400 hover:text-blue-600 underline ml-1'>Sign in</Link>

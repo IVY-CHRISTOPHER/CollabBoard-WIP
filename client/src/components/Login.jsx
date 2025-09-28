@@ -59,12 +59,13 @@ const Login = (props) => {
                 <hr />
 
                 <form onSubmit={submitHandler} className='w-2/3'>
-                    <label className='block'>
+                    <label for='email' className='block'>
                         Email
                     </label>
                     <input 
                         type="email"
                         name='email'
+                        id='email'
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Email@example.com' 
@@ -74,12 +75,13 @@ const Login = (props) => {
                     
                     <br></br>
 
-                    <label className='block mt-2'>
+                    <label for='password' className='block mt-2'>
                         Password
                     </label>
                     <input 
                         type="text"
                         name='password'
+                        id='password'
                         value={userData.password}
                         onChange={changeHandler}
                         placeholder='at least 8 characters' 
@@ -93,13 +95,19 @@ const Login = (props) => {
                         <Link to={'/forgotPassword'} className='text-blue-400 hover:text-blue-800 underline m-1 '>Forgot Password?</Link>
                     </p>
 
-                    <input type="submit" value="Login" className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-1' /> 
+                    <input 
+                        type="submit" 
+                        value="Login" 
+                        className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-1' 
+                    /> 
                 </form>
                 
 
                 <div class="relative flex py-5 items-center w-2/3">
                     <hr class="flex-grow border-t border-gray-400"/>
+    
                     <span class="flex-shrink mx-4 text-black"> or </span>
+    
                     <hr class="flex-grow border-t border-gray-400"/>
                 </div>
 
@@ -120,7 +128,7 @@ const Login = (props) => {
             </div>
 
             <div className='flex-1 h-full'>
-                <img src="src\assets\LoginPic.jpg" alt="Login Picture"  className='h-full w-full object-cover'/>
+                <img src="\src\assets\LoginPic.jpg" alt="Login Picture"  className='h-full w-full object-cover'/>
             </div>
 
 

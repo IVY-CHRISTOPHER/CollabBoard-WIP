@@ -11,12 +11,9 @@ export default {
       'blueberry' : '#001381',
       'strawberry' : '#e11d48',
       'disabledGray' : "#ECF0FF",
-      'orangeCream' : "#FDBA74"
-
-    }
+      'orangeCream' : "#F39174",
+      }
     },
-    
-    
   },
   plugins: [],
 }
