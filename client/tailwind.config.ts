@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -7,12 +8,15 @@ export default {
   theme: {
     extend: {
       // this is for custom added colors, you need it in the Extend section here so the tailwind base set colors still work
+      fontFamily: {
+          roboto : ['Roboto', 'sans-serif'],
+        },
       colors: {
-      'blueberry' : '#001381',
-      'strawberry' : '#e11d48',
-      'disabledGray' : "#ECF0FF",
-      'orangeCream' : "#F39174",
-      }
+        'blueberry' : '#001381',
+        'strawberry' : '#e11d48',
+        'disabledGray' : "#ECF0FF",
+        'orangeCream' : "#F39174",
+      },
     },
   },
   plugins: [],
