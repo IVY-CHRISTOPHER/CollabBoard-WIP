@@ -50,9 +50,11 @@ const Login = (props) => {
                 <img src="src\assets\logo.png" alt="Logo" className='w-2/12 object-fit '/>
 
                 <div className='w-2/3 bg-disabledGray border-1 rounded-md mb-10'>
-                    <button className='w-1/2 bg-blueberry rounded-md text-white'>
-                        <Link to={'/register'}>Register</Link>
-                    </button>
+                    <Link to={'/register'}>
+                        <button  className='w-1/2 bg-blueberry rounded-md text-white'>
+                            Register
+                        </button>
+                    </Link>
                     <button className='w-1/2'>Login</button>
                 </div>
                 

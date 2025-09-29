@@ -4,6 +4,9 @@ import Login from './components/Login'
 import Registration from './components/Registration'
 import ForgotPassword from './components/ForgotPassword'
 import NewPassword from './components/NewPassword'
+import Verification from './components/Verification'
+import ResetComplete from './components/ResetComplete'
+
 
 function App() {
 
@@ -18,8 +21,8 @@ function App() {
       {/* forgot password */}
       <Route path='/password/forgot' element={<ForgotPassword/>}/>
       <Route path='/password/update' element={<NewPassword/>}/>
-      {/* <Route path='/verification' element={<Verification/>}/> */}
-      {/* <Route path='/password/complete' element={<PasswordComplete/>}/> */}
+      <Route path='/verification' element={<Verification/>}/>
+      <Route path='/password/complete' element={<ResetComplete/>}/>
 
       {/* Tasks */}
       {/* <Route path='/home' element={<Dashboard/>}/> */}

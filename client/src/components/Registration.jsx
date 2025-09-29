@@ -63,9 +63,12 @@ const Registration = (props) => {
 
                 <div className='w-2/3 bg-disabledGray border-1 rounded-md mb-10'>
                     <button className='w-1/2 '>Register</button>
-                    <button className='w-1/2 bg-blueberry rounded-md text-white'>
-                        <Link to={'/'}>Login</Link>
-                    </button>
+                    
+                    <Link to={'/'}>
+                        <button className='w-1/2 bg-blueberry rounded-md text-white'>
+                            Login
+                        </button>
+                    </Link>
                 </div>
             
                 <hr />
