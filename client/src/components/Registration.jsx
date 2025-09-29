@@ -74,7 +74,7 @@ const Registration = (props) => {
                 <hr />
 
                 <form onSubmit={submitHandler} className='w-2/3'>
-                    <label for='firstName' className='block'>
+                    <label htmlFor='firstName' className='block'>
                         First Name
                     </label>
                     <input 
@@ -88,7 +88,7 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.firstName}</p>
 
-                    <label for='lastName' className='block mt-2'>
+                    <label htmlFor='lastName' className='block mt-2'>
                         Last Name
                     </label>
                     <input 
@@ -102,7 +102,7 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.lastName}</p>
 
-                    <label for='email' className='block mt-2'>
+                    <label htmlFor='email' className='block mt-2'>
                         Email
                     </label>
                     <input 
@@ -116,7 +116,7 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
 
-                    <label for='password' className='block mt-2'>
+                    <label htmlFor='password' className='block mt-2'>
                         Password
                     </label>
                     <input 
@@ -130,7 +130,7 @@ const Registration = (props) => {
                     />
                     <p className='text-strawberry'>{userErrors.password}</p>
 
-                    <label for='confirmPassword' className='block mt-2'>
+                    <label htmlFor='confirmPassword' className='block mt-2'>
                         Confirm Password
                     </label>
                     <input 

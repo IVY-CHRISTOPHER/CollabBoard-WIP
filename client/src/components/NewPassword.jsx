@@ -57,7 +57,7 @@ const NewPassword = (props) => {
                         </p>
                         
                         <form className='w-2/3'>
-                            <label for='password' className='block mt-2'>
+                            <label htmlFor='password' className='block mt-2'>
                                 New Password
                             </label>
                             <input 
@@ -71,7 +71,7 @@ const NewPassword = (props) => {
                             />
                             <p className='text-strawberry'>{userErrors.password}</p>
 
-                            <label for='confirmPassword' className='block mt-2'>
+                            <label htmlFor='confirmPassword' className='block mt-2'>
                                 Confirm New Password
                             </label>
                             <input 

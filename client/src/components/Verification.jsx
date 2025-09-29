@@ -45,7 +45,7 @@ const Verification = (props) => {
                 </p>
 
                 <form className='w-2/3'>
-                    <label for='password' className='block mt-2'>
+                    <label htmlFor='password' className='block mt-2'>
                         Verification Code
                     </label>
                     <input

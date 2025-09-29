@@ -33,7 +33,7 @@ const ForgotPassword = (props) => {
                 <h1 className='text-2xl font-medium' >Forgot Password?</h1>
                 
                 <form className='w-2/3'>
-                    <label for='email' className='block'>
+                    <label htmlFor='email' className='block'>
                         Email
                     </label>
                     <input 
@@ -56,12 +56,12 @@ const ForgotPassword = (props) => {
                 </form>
 
 
-                <div class="relative flex py-5 items-center w-2/3">
-                    <hr class="flex-grow border-t border-gray-400"/>
+                <div className="relative flex py-5 items-center w-2/3">
+                    <hr className="flex-grow border-t border-gray-400"/>
 
-                    <span class="flex-shrink mx-4 text-black"> or </span>
+                    <span className="flex-shrink mx-4 text-black"> or </span>
                     
-                    <hr class="flex-grow border-t border-gray-400"/>
+                    <hr className="flex-grow border-t border-gray-400"/>
                 </div>
 
                 <p>

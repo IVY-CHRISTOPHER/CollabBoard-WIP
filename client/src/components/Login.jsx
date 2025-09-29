@@ -61,7 +61,7 @@ const Login = (props) => {
                 <hr />
 
                 <form onSubmit={submitHandler} className='w-2/3'>
-                    <label for='email' className='block'>
+                    <label htmlFor='email' className='block'>
                         Email
                     </label>
                     <input 
@@ -77,7 +77,7 @@ const Login = (props) => {
                     
                     <br></br>
 
-                    <label for='password' className='block mt-2'>
+                    <label htmlFor='password' className='block mt-2'>
                         Password
                     </label>
                     <input 

@@ -6,6 +6,7 @@ import ForgotPassword from './components/ForgotPassword'
 import NewPassword from './components/NewPassword'
 import Verification from './components/Verification'
 import ResetComplete from './components/ResetComplete'
+import Error from './views/Error'
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
       
       {/*Other*/}
       {/* <Route path='/termsOfService' element={<TermsOfService/>}/> */}
-      {/* <Route path='*' element={<NotFound/>}/> */}
+      <Route path='*' element={<Error/>}/>
 
     </Routes>
     </>
