@@ -61,11 +61,11 @@ const Registration = (props) => {
 
                 <img src="src\assets\logo.png" alt="Logo" className='w-2/12 object-fit '/>
 
-                <div className='w-2/3 bg-disabledGray border-1 rounded-md mb-10'>
-                    <button className='w-1/2 '>Register</button>
+                <div className='w-2/3 bg-linen border-1 rounded-md mb-10'>
+                    <button className='w-1/2 text-slateGry'>Register</button>
                     
                     <Link to={'/'}>
-                        <button className='w-1/2 bg-blueberry rounded-md text-white'>
+                        <button className='w-1/2 bg-salmon rounded-md text-white'>
                             Login
                         </button>
                     </Link>
@@ -84,7 +84,7 @@ const Registration = (props) => {
                         value={userData.firstName}
                         onChange={changeHandler}
                         placeholder='Type in users name'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion '
                     />
                     <p className='text-strawberry'>{userErrors.firstName}</p>
 
@@ -98,7 +98,7 @@ const Registration = (props) => {
                         value={userData.lastName}
                         onChange={changeHandler}
                         placeholder='Type in users name'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.lastName}</p>
 
@@ -112,7 +112,7 @@ const Registration = (props) => {
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Example@email.com'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
 
@@ -126,7 +126,7 @@ const Registration = (props) => {
                         value={userData.password}
                         onChange={changeHandler}
                         placeholder='At least 8 characters'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.password}</p>
 
@@ -140,19 +140,19 @@ const Registration = (props) => {
                         value={userData.confirmPassword}
                         onChange={changeHandler}
                         placeholder='Confirm Password'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.confirmPassword}</p>
 
                     <p className='mt-2'>
                         By signing up you agree to our 
-                        <Link to={'/termsOfService'} className='text-blue-500 hover:text-blue-800 underline ml-1'>Terms Of Service</Link>
+                        <Link to={'/termsOfService'} className='text-linksBlu hover:text-blue-800 ml-1'>Terms Of Service</Link>
                     </p>
 
                     <input 
                         type="submit" 
                         value="Register" 
-                        className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2' 
+                        className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2' 
                     />
                 </form>
 
@@ -164,19 +164,19 @@ const Registration = (props) => {
                     <hr class="flex-grow border-t border-gray-400"/>
                 </div>
 
-                <button class="px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-black hover:bg-orangeCream">
+                <button class="px-4 py-2 border flex gap-2 border-strawberryLt rounded-lg text-black hover:bg-salmon hover:text-white mt-2">
                     <img class="w-6 h-6" src="src\assets\google-color.svg" alt="google logo"/>
                     <p>Continue with Google</p>
                 </button>
 
-                <button class=" mt-2 px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-black hover:bg-orangeCream">
+                <button class=" px-4 py-2 border flex gap-2 border-strawberryLt rounded-lg text-black hover:bg-salmon hover:text-white mt-2">
                     <img class="w-6 h-6" src="src\assets\facebook-official.svg" alt="facebook logo"/>
                     <p>Continue with Facebook</p>
                 </button>
                 
                 <p>
                     Already have an account?
-                    <Link to={'/'} className='text-blue-400 hover:text-blue-600 underline ml-1'>Sign in</Link>
+                    <Link to={'/'} className='text-linksBlu hover:text-blue-600 ml-1'>Sign in</Link>
                 </p>
 
             </div>
