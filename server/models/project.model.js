@@ -17,7 +17,7 @@ const ProjectSchema = new Schema(
             type: [
                 {
                     type: ObjectId,
-                    ref: "milestone",
+                    ref: "milestones",
                 },
             ],
         },

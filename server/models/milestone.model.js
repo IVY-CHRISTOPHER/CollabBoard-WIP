@@ -28,4 +28,4 @@ const MilestoneSchema = new Schema(
     { timestamps: true }
 );
 
-export default model("milestone", MilestoneSchema);
+export default model("milestones", MilestoneSchema);
