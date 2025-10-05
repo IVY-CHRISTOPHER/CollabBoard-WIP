@@ -2,7 +2,7 @@ import { Schema, ObjectId, model } from "mongoose";
 
 const TaskSchema = new Schema(
     {
-        TaskName: {
+        taskName: {
             type: String,
             required: [true, "Task name is required."],
             minLength: [3, "Task Name must be at least 3 characters."],
@@ -43,4 +43,4 @@ const TaskSchema = new Schema(
     { timestamps: true }
 );
 
-export default model("Task", TaskSchema);
+export default model("task", TaskSchema);
