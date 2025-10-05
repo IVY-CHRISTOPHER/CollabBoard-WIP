@@ -38,7 +38,7 @@ const Verification = (props) => {
             <div className='flex flex-col flex-1 items-center md:justify-center w-full'>
                 <h1 className='text-2xl font-medium' >Enter Verification Code</h1>
 
-                <p className='text-slate-500'>
+                <p className='text-cadetGry'>
                     A verification code has been sent to example@email.com
                     <br />
                     *Please enter validation code
@@ -55,18 +55,18 @@ const Verification = (props) => {
                         value={userData.verificationCode}
                         onChange={changeHandler}
                         placeholder='Please Enter Verification Code'
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.verificationCode}</p>
 
                     <p className='text-right'>
-                        <Link to={'/password/forgot'} className='text-blue-400 hover:text-blue-600 underline ml-1'>Resend Verification Code</Link>
+                        <Link to={'/password/forgot'} className='text-linksBlu hover:text-blue-600 ml-1'>Resend Verification Code</Link>
                     </p>
 
                     <input
                         type="submit"
                         value="Verify"
-                        className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2'
+                        className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2'
                     />
 
                 </form>

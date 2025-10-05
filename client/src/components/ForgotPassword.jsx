@@ -31,6 +31,7 @@ const ForgotPassword = (props) => {
             
             <div className='flex flex-col flex-1 items-center md:justify-center w-full'>
                 <h1 className='text-2xl font-medium' >Forgot Password?</h1>
+                <p className='text-cadetGry'>Don't worry, we can help.</p>
                 
                 <form className='w-2/3'>
                     <label htmlFor='email' className='block'>
@@ -43,14 +44,14 @@ const ForgotPassword = (props) => {
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Email@example.com' 
-                        className='w-full border-2 rounded-md '
+                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion '
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
 
                     <input 
                         type="submit" 
                         value="Continue" 
-                        className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2' 
+                        className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2' 
                     />
 
                 </form>
@@ -66,7 +67,7 @@ const ForgotPassword = (props) => {
 
                 <p>
                     Already have an account?
-                    <Link to={'/'} className='text-blue-400 hover:text-blue-600 underline ml-1'>Sign in</Link>
+                    <Link to={'/'} className='text-linksBlu hover:text-blue-600 ml-1'>Sign in</Link>
                 </p>
             </div>
 

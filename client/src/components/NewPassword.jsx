@@ -48,7 +48,7 @@ const NewPassword = (props) => {
                     <div className='flex flex-col flex-1 items-center md:justify-center w-full'>
                         <h1 className='text-2xl font-medium' >Enter New Password</h1>
 
-                        <p className='text-slate-500'>
+                        <p className='text-cadetGry'>
                             Please enter your new password.
                             <br />
                             After resetting your password, please log in againwith the new password.
@@ -67,7 +67,7 @@ const NewPassword = (props) => {
                                 value={userData.password}
                                 onChange={changeHandler}
                                 placeholder='At least 8 characters'
-                                className='w-full border-2 rounded-md '
+                                className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                             />
                             <p className='text-strawberry'>{userErrors.password}</p>
 
@@ -81,14 +81,14 @@ const NewPassword = (props) => {
                                 value={userData.confirmPassword}
                                 onChange={changeHandler}
                                 placeholder='Confirm Password'
-                                className='w-full border-2 rounded-md '
+                                className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
                             />
                             <p className='text-strawberry'>{userErrors.confirmPassword}</p>
         
                             <input 
                                 type="submit" 
                                 value="Reset Password" 
-                                className='w-full rounded-md bg-blueberry py-2 px-4 text-white mt-2' 
+                                className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2' 
                             />
         
                         </form>
