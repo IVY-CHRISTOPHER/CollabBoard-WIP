@@ -41,8 +41,8 @@ const UserDashboard = (props) => {
                                             allProjects.map(project => (
                                                 <tr key={project.id} className='border'>
                                                     <td>{project.projectName}</td>
-                                                    <td>{project.role}</td>
-                                                    <td>{project.tasks.length}</td>
+                                                    {/* <td>{project.userId.id}</td>
+                                                    <td>{project.tasks.length}</td> */}
                                                 </tr>
                                             ))
                                         }

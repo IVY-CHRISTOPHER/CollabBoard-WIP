@@ -24,7 +24,7 @@ function CreateProject() {
     const submitHandler = e => {
         e.preventDefault()
         const newProject = {...project, userId: user._id }
-        axios.post('http://localhost:3000/api/project/add', newProject ,{withCredentials: true})
+        axios.post('http://localhost:3000/api/project/create', newProject ,{withCredentials: true})
         .then( () => navigate('/user/dashboard'))
         .catch(error => {setProjectErrors(error)})
     }

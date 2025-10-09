@@ -47,7 +47,9 @@ function JoinProject() {
                             placeholder='Enter Code'
                             className='w-full border-2 border-mist rounded-md text-cadetGry bg-lotion'
                         />
-                        <p className='text-shadowGry'>Don’t have a project code? Ask your team lead or project admin to share project invitation code.</p>
+                        <p className='text-shadowGry bg-ghost border-2 rounded-md border-steelBluLt p-2'>
+                            <span className='font-bold'>Don’t have a project code?</span> 
+                            Ask your team lead or project admin to share project invitation code.</p>
                         <input
                             type="submit"
                             value="Join"
