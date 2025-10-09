@@ -67,7 +67,7 @@ const NewPassword = (props) => {
                                 value={userData.password}
                                 onChange={changeHandler}
                                 placeholder='At least 8 characters'
-                                className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
+                                className='w-full border-2 border-ghost rounded-md text-cadetGry bg-lotion'
                             />
                             <p className='text-strawberry'>{userErrors.password}</p>
 
@@ -81,14 +81,14 @@ const NewPassword = (props) => {
                                 value={userData.confirmPassword}
                                 onChange={changeHandler}
                                 placeholder='Confirm Password'
-                                className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
+                                className='w-full border-2 border-ghost rounded-md text-cadetGry bg-lotion'
                             />
                             <p className='text-strawberry'>{userErrors.confirmPassword}</p>
         
                             <input 
                                 type="submit" 
                                 value="Reset Password" 
-                                className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2' 
+                                className='w-full rounded-md bg-midnightBlu py-2 px-4 text-white mt-2' 
                             />
         
                         </form>

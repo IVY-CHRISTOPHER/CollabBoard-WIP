@@ -44,14 +44,14 @@ const ForgotPassword = (props) => {
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Email@example.com' 
-                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion '
+                        className='w-full border-2 border-gost rounded-md text-cadetGry bg-lotion '
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
 
                     <input 
                         type="submit" 
                         value="Continue" 
-                        className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-2' 
+                        className='w-full rounded-md bg-midnightBlu py-2 px-4 text-white mt-2' 
                     />
 
                 </form>

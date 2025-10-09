@@ -19,7 +19,7 @@ const ResetComplete = (props) => {
                     Please login with your new password
                 </p>
 
-                <Link to={'/'} className='w-1/3 rounded-md bg-salmon py-2 px-4 text-white mt-1 text-center mt-10' >
+                <Link to={'/'} className='w-1/3 rounded-md bg-midnightBlu py-2 px-4 text-white mt-1 text-center mt-10' >
                     <button>Return to Login</button>
                 </Link>
 
