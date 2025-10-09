@@ -12,11 +12,11 @@ const MilestoneSchema = new Schema(
             type: String,
             minLength: [3, "Description must be at least 3 characters."],
         },
-        Tasks: {
+        tasks: {
             type: [
                 {
                     type: ObjectId,
-                    ref: "Task",
+                    ref: "task",
                 },
             ],
         },
@@ -28,4 +28,4 @@ const MilestoneSchema = new Schema(
     { timestamps: true }
 );
 
-export default model("milestone", MilestoneSchema);
+export default model("milestones", MilestoneSchema);

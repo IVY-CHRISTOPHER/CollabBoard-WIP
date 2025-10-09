@@ -7,30 +7,34 @@ const ProjectSchema = new Schema(
             type: String,
             required: [true, "Project name is required."],
             minLength: [3, "Project name must be at least 3 characters."],
-            trim: [true],
+        },
+        description: {
+            type: String,
+            required: [true, "Project Descriptions is required"],
+            minLength: [15, "Description must be at least 15 Characters"],
         },
         milestones: {
             type: [
                 {
                     type: ObjectId,
-                    ref: "milestone",
+                    ref: "milestones",
                 },
             ],
-            //TODO Creating a project with tutorial tasks inside it.
-            // default: [
-            //     {
-            //         milestoneName: "Welcome to your first Project!",
-            //         projectId: this.ObjectId
-            // Tasks: [
-            //     {
-            //         TaskName: "Edit this task to customize it!",
-            //         priority: "High",
-            //         status: "in-progress"
-            //     }
-            // ]
-            //     }
-            // ]
         },
+        //TODO Have each new project start with a preset of instructions inside of them
+        // default: [
+        //     {
+        //         milestoneName: "Welcome to your first Project!",
+        //         projectId: this.ObjectId,
+        //         tasks: [
+        //             {
+        //                 TaskName: "Edit this task to customize it!",
+        //                 priority: "High",
+        //                 status: "in-progress",
+        //             },
+        //         ],
+        //     },
+        // ],
         userId: {
             type: ObjectId,
             ref: "User",

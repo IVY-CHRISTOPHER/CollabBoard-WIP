@@ -117,7 +117,7 @@ export function findOneUser(req, res) {
 export function updateUser(req, res) {
     User.findByIdAndUpdate(
         {
-            _id: req.params.id,
+            _id: req.params.id
         },
         req.body,
         {
@@ -136,7 +136,7 @@ export function updateUser(req, res) {
         });
 }
 
-//Deleting a user
+//! Deletes a user
 export function deleteUser(req, res) {
     User.deleteOne({ _id: req.params.id })
         .then((deletedUser) => {
