@@ -12,15 +12,39 @@ export default {
           roboto : ['Roboto', 'sans-serif'],
         },
       colors: {
-        'salmon' : '#F28568',
-        'linen' : '#FCEDEB',
+        // White
         'lotion' : '#FAFAFA',
-        'strawberry' : '#DC2626',
-        'strawberryLt' : '#F9D4CE',
-        'linksBlu' : '#2A76F4',
+        'linen' : '#FCEDEB',
+        'ghost' : '#EDF1FA',
+
+        // Greys
         'slateGry' : '#6B7280',
         'cadetGry' : '#9CA3AF',
         'shadowGry' : '#404040',
+
+        // Red + Orange
+        'strawberry' : '#DC2626',
+        'strawberryLt' : '#F9D4CE',
+        'CoralRed' : '#EF4444',
+        'maxRed' : '#DC2626',
+        'salmon' : '#F28568',
+        'mistyRose' : '#FEE2E2' ,
+
+        // Blue
+        'linksBlu' : '#2A76F4',
+        'midnightBlu' : '#243C5C',
+        'mist' : '#D3DDF4',
+        'steelBluLt' : '#AAC0EA',
+        'electricBlu' : '#33517B',
+        'cobaltBluLt' : '#83A7E2',
+        'squidInk' : '#122035',
+
+        // Green
+        'PigmentGreen' : '#16A34A',
+        'magicMint' : '#BBF7D0',
+
+        // Yellow 
+        'LemonLt' : '#FEF3C7',
 
       },
     },

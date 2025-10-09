@@ -8,7 +8,7 @@ const CreateCard = (props) => {
     return (
             <div className=' w-2/3 rounded-lg text-center shadow-md'>
 
-                <button className='rounded-full bg-salmon text-white text-2xl w-12 h-12 border-white m-4 place-items-center'> 
+                <button className='rounded-full bg-midnightBlu text-white text-2xl w-12 h-12 border-white m-4 place-items-center'> 
                     <img src="\src\assets\AddIcon.svg" alt="Add icon"/>
                 </button>
 
@@ -20,7 +20,7 @@ const CreateCard = (props) => {
                 </p>
 
                 <Link to={'/project/create'}>
-                    <button className='w-2/3 rounded-md bg-salmon py-2 px-4 text-white mt-2 mb-4'>
+                    <button className='w-2/3 rounded-md bg-midnightBlu py-2 px-4 text-white mt-2 mb-4'>
                         Create A Project
                     </button>
                 </Link>

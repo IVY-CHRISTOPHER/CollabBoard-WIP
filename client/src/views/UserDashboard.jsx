@@ -28,7 +28,7 @@ const UserDashboard = (props) => {
                         <div className='h-1/2 w-2/3 mb-2'>
                             <div className="overflow-auto h-full">
                                 <table className='w-full rounded-lg '>
-                                    <caption className='bg-salmon text-white sticky top-0 '>Current Projects</caption>
+                                    <caption className='bg-midnightBlu text-white sticky top-0 '>Current Projects</caption>
                                     <thead className='sticky top-6 border bg-strawberryLt'>
                                         <tr >
                                             <th>Project</th>
@@ -38,7 +38,7 @@ const UserDashboard = (props) => {
                                     </thead>
                                     <tbody > 
                                         {
-                                            projects.map(project => (
+                                            allProjects.map(project => (
                                                 <tr key={project.id} className='border'>
                                                     <td>{project.projectName}</td>
                                                     <td>{project.role}</td>

@@ -27,7 +27,7 @@ const Login = (props) => {
         axios.post('http://localhost:3000/api/login', userData, {withCredentials: true})
         .then( res => {
             setUser(res.data)
-            navigate('/home')
+            navigate('/user/dashboard')
         })
         .catch(error => {
                 setUserErrors(error)
@@ -49,13 +49,13 @@ const Login = (props) => {
 
                 <img src="src\assets\logo.png" alt="Logo" className='w-2/12 object-fit '/>
 
-                <div className='w-2/3 bg-linen border-1 rounded-md mb-10'>
+                <div className='w-2/3 bg-ghost border-1 rounded-md mb-10'>
                     <Link to={'/register'}>
-                        <button  className='w-1/2 bg-salmon rounded-md text-white'>
+                        <button  className='w-1/2 bg-midnightBlu rounded-md text-white'>
                             Register
                         </button>
                     </Link>
-                    <button className='w-1/2 text-slateGry'>Login</button>
+                    <button className='w-1/2 text-midnightBlu'>Login</button>
                 </div>
                 
                 <hr />
@@ -71,7 +71,7 @@ const Login = (props) => {
                         value={userData.email}
                         onChange={changeHandler}
                         placeholder='Email@example.com' 
-                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion '
+                        className='w-full border-2 border-mist rounded-md text-cadetGry bg-lotion '
                     />
                     <p className='text-strawberry'>{userErrors.email}</p>
                     
@@ -87,7 +87,7 @@ const Login = (props) => {
                         value={userData.password}
                         onChange={changeHandler}
                         placeholder='at least 8 characters' 
-                        className='w-full border-2 border-strawberryLt rounded-md text-cadetGry bg-lotion'
+                        className='w-full border-2 border-mist rounded-md text-cadetGry bg-lotion'
                     />
                     <p className='text-strawberry'>{userErrors.password}</p>
 
@@ -100,7 +100,7 @@ const Login = (props) => {
                     <input 
                         type="submit" 
                         value="Login" 
-                        className='w-full rounded-md bg-salmon py-2 px-4 text-white mt-1' 
+                        className='w-full rounded-md bg-midnightBlu py-2 px-4 text-white mt-1' 
                     /> 
                 </form>
                 
@@ -113,12 +113,12 @@ const Login = (props) => {
                     <hr class="flex-grow border-t border-gray-400"/>
                 </div>
 
-                <button class="px-4 py-2 border flex gap-2 border-strawberryLt rounded-lg text-black hover:bg-salmon hover:text-white">
+                <button class="px-4 py-2 border flex gap-2 border-midnightBlu rounded-lg text-black hover:bg-midnightBlu hover:text-white">
                     <img class="w-6 h-6" src="src\assets\google-color.svg" alt="google logo"/>
                     <p>Continue with Google</p>
                 </button>
 
-                <button class=" mt-2 px-4 py-2 border flex gap-2 border-strawberryLt  rounded-lg hover:bg-salmon hover:text-white">
+                <button class=" mt-2 px-4 py-2 border flex gap-2 border-midnightBlu  rounded-lg hover:bg-midnightBlu hover:text-white">
                     <img class="w-6 h-6" src="src\assets\facebook-official.svg" alt="facebook logo"/>
                     <p>Continue with Facebook</p>
                 </button>

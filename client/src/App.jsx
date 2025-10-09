@@ -8,6 +8,8 @@ import Verification from './components/Verification'
 import ResetComplete from './components/ResetComplete'
 import Error from './views/Error'
 import UserDashboard from './views/UserDashboard'
+import CreateProject from './components/CreateProject'
+import JoinProject from './components/JoinProject'
 
 
 function App() {
@@ -30,8 +32,8 @@ function App() {
       <Route path='/user/dashboard' element={<UserDashboard/>}/>
       
       {/* Project */}
-      {/* <Route path='/project/create' element={<CreateProject/>}/> */}
-      {/* <Route path='/project/join' element={<JoinProject/>}/> */}
+      <Route path='/project/create' element={<CreateProject/>}/>
+      <Route path='/project/join' element={<JoinProject/>}/>
       {/* <Route path='/project/:project_id/dashboard' element={<ProjectDashboard />}/> */}
 
 
