@@ -38,13 +38,14 @@ export default {
         'electricBlu' : '#33517B',
         'cobaltBluLt' : '#83A7E2',
         'squidInk' : '#122035',
+        'iceberg' : '#E3ECF5',
 
         // Green
         'PigmentGreen' : '#16A34A',
         'magicMint' : '#BBF7D0',
 
         // Yellow 
-        'LemonLt' : '#FEF3C7',
+        'lemonLt' : '#FEF3C7',
 
       },
     },

@@ -10,13 +10,13 @@ import Error from './views/Error'
 import UserDashboard from './views/UserDashboard'
 import CreateProject from './components/CreateProject'
 import JoinProject from './components/JoinProject'
+import ProjectDashboard from './views/ProjectDashboard'
 
 
 function App() {
 
   return (
     <>
-    {/* Nav */}
     <Routes>
       {/* Login and Reg */}
       <Route path='/' element={<Login/>}/>
@@ -34,7 +34,7 @@ function App() {
       {/* Project */}
       <Route path='/project/create' element={<CreateProject/>}/>
       <Route path='/project/join' element={<JoinProject/>}/>
-      {/* <Route path='/project/:project_id/dashboard' element={<ProjectDashboard />}/> */}
+      <Route path='/project/:project_id/dashboard' element={<ProjectDashboard />}/>
 
 
       {/* Milestone (main task) */}
