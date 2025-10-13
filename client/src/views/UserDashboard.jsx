@@ -8,6 +8,9 @@ import { getAllProjects } from '../services/project.services.js'
 const UserDashboard = (props) => {
     const { user, setUser } = useContext(userContext)
     const {allProjects, setAllProjects} = useContext(userContext)
+   
+
+    
 
     useEffect(() => {
         axios.get('http://localhost:3000/api/projects', {withCredentials: true})
@@ -15,7 +18,14 @@ const UserDashboard = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-    const userProjects = allProjects.map(project => project.userId._id == user._id ? project : null).filter(project => project)
+    
+    
+    
+    const userProjects = allProjects.map(project => project.userId.id == user.id ? project : null).filter(project => project)
+    console.log(user)
+    console.log(user.id)
+    console.log(user.firstName)
+    console.log(user.lastName)
 
     return (
         <div>
@@ -41,10 +51,10 @@ const UserDashboard = (props) => {
                                     <tbody > 
                                         {
                                             userProjects.map(project => (
-                                                <tr key={project._id} className='border'>
+                                                <tr key={project.id} className='border'>
                                                     <td>{project.projectName}</td>
-                                                    {/* <td>{project.userId.id}</td>
-                                                    <td>{project.tasks.length}</td> */}
+                                                    <td>{project.userId.id}</td>
+                                                    {/* <td>{project.tasks.length}</td> */}
                                                 </tr>
                                             ))
                                         }
