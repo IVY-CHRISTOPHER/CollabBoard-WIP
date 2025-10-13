@@ -10,7 +10,7 @@ const UserDashboard = (props) => {
     const {allProjects, setAllProjects} = useContext(userContext)
 
     useEffect(() => {
-        getAllProjects()
+        axios.get('http://localhost:3000/api/projects', {withCredentials: true})
             .then(res => setAllProjects(res.data))
             .catch(err => console.log(err))
     }, [])
