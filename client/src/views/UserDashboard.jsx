@@ -15,10 +15,12 @@ const UserDashboard = (props) => {
             .catch(err => console.log(err))
     }, [])
 
+    const userProjects = allProjects.map(project => project.userId._id == user._id ? project : null).filter(project => project)
+
     return (
         <div>
             {
-                allProjects.length >=1 
+                userProjects.length >=1 
                 ?
                     <div className='text-center h-screen flex flex-col items-center justrify-center'>
                         <h1 className='text-3xl font-bold'>CollabBoard</h1>
@@ -38,7 +40,7 @@ const UserDashboard = (props) => {
                                     </thead>
                                     <tbody > 
                                         {
-                                            allProjects.map(project => (
+                                            userProjects.map(project => (
                                                 <tr key={project.id} className='border'>
                                                     <td>{project.projectName}</td>
                                                     {/* <td>{project.userId.id}</td>
