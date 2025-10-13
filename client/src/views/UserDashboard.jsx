@@ -1,16 +1,16 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { userContext } from '../context/userContext';
-import axios from 'axios';
 import CreateCard from '../components/CreateCard'
 import JoinCard from '../components/JoinCard';
+import { getAllProjects } from '../services/project.services.js'
 
 const UserDashboard = (props) => {
     const { user, setUser } = useContext(userContext)
     const {allProjects, setAllProjects} = useContext(userContext)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/projects', {withCredentials: true})
+        getAllProjects()
             .then(res => setAllProjects(res.data))
             .catch(err => console.log(err))
     }, [])
