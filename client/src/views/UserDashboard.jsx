@@ -3,12 +3,12 @@ import {Link, useNavigate} from 'react-router-dom';
 import { userContext } from '../context/userContext';
 import CreateCard from '../components/CreateCard'
 import JoinCard from '../components/JoinCard';
-import { getAllProjects } from '../services/project.services.js'
+import axios from 'axios'
+// import { getAllProjects } from '../services/project.services.js'
 
 const UserDashboard = (props) => {
     const { user, setUser } = useContext(userContext)
     const {allProjects, setAllProjects} = useContext(userContext)
-   
 
     
 
@@ -18,14 +18,16 @@ const UserDashboard = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-    
-    
-    
-    const userProjects = allProjects.map(project => project.userId.id == user.id ? project : null).filter(project => project)
+
+
+
+    const userProjects = allProjects.map(project => project.userId == user._id ? project : null).filter(project => project)
     console.log(user)
-    console.log(user.id)
+    console.log(user._id)
     console.log(user.firstName)
     console.log(user.lastName)
+    // console.log("line 29", userProjects)
+    // console.log("All Projects", allProjects)
 
     return (
         <div>

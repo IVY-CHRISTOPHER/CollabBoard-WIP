@@ -10,7 +10,7 @@ import { authenticate } from "../config/jwt.config.js";
 export default (app) => {
     //Add owned Projects -> userId included in req.body by middleware
     app.post(
-        "/api/projects/create",
+        "/api/project/create",
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
         addProject
     );

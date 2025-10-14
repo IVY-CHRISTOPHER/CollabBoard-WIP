@@ -8,7 +8,7 @@ const ProjectSchema = new Schema(
             required: [true, "Project name is required."],
             minLength: [3, "Project name must be at least 3 characters."],
         },
-        description: {
+        projectDescription: {
             type: String,
             required: [true, "Project Descriptions is required"],
             minLength: [15, "Description must be at least 15 Characters"],
