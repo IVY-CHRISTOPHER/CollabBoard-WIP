@@ -28,9 +28,6 @@ function CreateMilestone() {
     return (
         <div className='h-screen flex flex-col items-center justrify-center'>
             <h1 className='text-3xl font-bold'>New Milestone</h1>
-            <p>
-                Let’s get you started by creating your milestone. This will be your central hub for managing tasks and collaborating with your team.
-            </p>
 
             <div className='grid place-items-center h-screen w-screen'>
 

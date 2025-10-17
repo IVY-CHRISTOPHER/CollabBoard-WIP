@@ -18,6 +18,22 @@ const SideBar = (props) => {
         props.setSidebarOpen(true)
     }
 
+    if(
+        location.pathname == '/' || 
+        location.pathname == '/register' || 
+        location.pathname == '/password/forgot' ||
+        location.pathname == '/password/update' ||
+        location.pathname == '/password/complete' ||
+        location.pathname == '/verification' ||
+        location.pathname == '/user/dashboard' ||
+        location.pathname == '/project/create' ||
+        location.pathname == '/project/join' 
+    ){
+        return (
+            <div></div>
+        )
+    }
+
     return (
         <div
             onMouseEnter={handleMouseEnter}

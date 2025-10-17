@@ -1,8 +1,28 @@
 import React, { useState, useContext } from 'react';
 import { userContext } from '../context/userContext';
+import { useLocation } from 'react-router-dom';
 
 const NavBar = (props) => {
     const { user, setUser } = useContext(userContext)
+
+    const location = useLocation()
+
+    if(
+        location.pathname == '/' || 
+        location.pathname == '/register' || 
+        location.pathname == '/password/forgot' ||
+        location.pathname == '/password/update' ||
+        location.pathname == '/password/complete' ||
+        location.pathname == '/verification' ||
+        location.pathname == '/user/dashboard' ||
+        location.pathname == '/project/create' ||
+        location.pathname == '/project/join' 
+
+    ){
+        return (
+            <div></div>
+        )
+    }
 
     return (
         <nav className={` bg-ghost w-full h-10 flex justify-between `}>
