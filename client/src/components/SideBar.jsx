@@ -25,12 +25,14 @@ const SideBar = (props) => {
         location.pathname == '/verification' ||
         location.pathname == '/user/dashboard' ||
         location.pathname == '/project/create' ||
-        location.pathname == '/project/join' 
+        location.pathname == '/project/join' ||
+        location.pathname == '*'
     ){
         return (
-            <div></div>
+            null
         )
     }
+    
 
     return (
         <div

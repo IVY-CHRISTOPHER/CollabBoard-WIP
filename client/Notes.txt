@@ -1,0 +1,8 @@
+Left off: 
+
+
+Tailwind notes: 
+    Colors: 
+        I have been using custom color names in the tailwind.config.ts file, ive given custom names to each hex code color in the design. I did this because if theres any major color change its easier to do a hex code change than have to find every spot to fix.
+        For Black and White those i just use the tailwind base colors for. 
+

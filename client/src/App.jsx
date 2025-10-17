@@ -1,5 +1,8 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
+import React, {useState,  useContext} from 'react';
+import SideBar from './components/SideBar'
+import NavBar from './components/NavBar'
 import Login from './components/Login'
 import Registration from './components/Registration'
 import ForgotPassword from './components/ForgotPassword'
@@ -12,17 +15,15 @@ import CreateProject from './components/CreateProject'
 import JoinProject from './components/JoinProject'
 import ProjectDashboard from './views/ProjectDashboard'
 import CreateMilestone from './components/CreateMilestone'
-import React, {useState,  useContext} from 'react';
-import SideBar from './components/SideBar'
-import NavBar from './components/NavBar'
 
 function App() {
-    const [sidebarOpen, setSidebarOpen] = useState(true)
+      const [sidebarOpen, setSidebarOpen] = useState(true)
+
   return (
     <>
-    <div className='h-screen'>
-      <div className='flex h-full'>
-        <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />   
+      <div className='flex h-screen'>
+        <SideBar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        
         <div className='flex-col w-full h-full overflow-hidden'>
           <NavBar />
           <Routes>
@@ -44,7 +45,6 @@ function App() {
             <Route path='/project/join' element={<JoinProject/>}/>
             <Route path='/project/:project_id/dashboard' element={<ProjectDashboard />}/>
 
-
             {/* Milestone (main task) */}
             <Route path='/project/:project_id/milestone/create' element={<CreateMilestone/>}/>
             {/* <Route path='/project/:project_id/milestone/:milestone_id' element={<MilestoneView/>}/> */}
@@ -61,7 +61,6 @@ function App() {
           </Routes>
         </div>
       </div>
-    </div>
     </>
   )
 }
