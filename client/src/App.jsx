@@ -11,7 +11,7 @@ import UserDashboard from './views/UserDashboard'
 import CreateProject from './components/CreateProject'
 import JoinProject from './components/JoinProject'
 import ProjectDashboard from './views/ProjectDashboard'
-
+import CreateMilestone from './components/CreateMilestone'
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
 
 
       {/* Milestone (main task) */}
-      {/* <Route path='/project/:project_id/milestone/create' element={<CreateMilestone/>}/> */}
+      <Route path='/project/:project_id/milestone/create' element={<CreateMilestone/>}/>
       {/* <Route path='/project/:project_id/milestone/:milestone_id' element={<MilestoneView/>}/> */}
 
       {/* Tasks (sub-task) */}
