@@ -4,11 +4,8 @@ import { userContext } from '../context/userContext';
 import axios from 'axios';
 
 const SideBar = (props) => {
-    
     const [taskOverviewOpen, setTaskOverviewOpen] = useState(true)
     const [quickActionsOpen, setQuickActionsOpen] = useState(true)
-
-    
 
     const handleMouseEnter = () => {
         props.setSidebarOpen(false)
@@ -18,6 +15,7 @@ const SideBar = (props) => {
         props.setSidebarOpen(true)
     }
 
+    // Path logic so it doesnt appeat on these routes but it will elsewhere
     if(
         location.pathname == '/' || 
         location.pathname == '/register' || 

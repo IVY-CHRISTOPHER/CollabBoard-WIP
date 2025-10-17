@@ -15,6 +15,7 @@ const UserDashboard = (props) => {
             .catch(err => console.log(err))
     }, [])
 
+    // go through projects and get only projects from the logged in user
     const userProjects = allProjects.map(project => project.userId == user._id ? project : null).filter(project => project)
     console.log(user)
     console.log(user._id)

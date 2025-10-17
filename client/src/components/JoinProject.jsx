@@ -23,6 +23,7 @@ function JoinProject() {
         .then( () => navigate('/user/dashboard'))
         .catch(error => {setProjectErrors(error)})
     }
+    
     return (
         <div className='h-screen flex flex-col items-center justrify-center'>
             <h1 className='text-3xl font-bold'>Join A Project</h1>

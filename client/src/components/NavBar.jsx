@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom';
 
 const NavBar = (props) => {
     const { user, setUser } = useContext(userContext)
-
     const location = useLocation()
 
+    // Path logic so it doesnt appeat on these routes but it will elsewhere
     if(
         location.pathname == '/' || 
         location.pathname == '/register' || 

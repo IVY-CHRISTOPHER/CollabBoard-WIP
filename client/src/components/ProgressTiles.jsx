@@ -4,9 +4,8 @@ import { userContext } from '../context/userContext'
 const ProgressTiles = (props) => {
     const { milestones, setMilestones } = useContext(userContext)
 
+    // Get the number of milestones
     const milestoneCount = milestones.length
-    console.log(milestoneCount)
-    console.log(milestones)
 
     return (
         <div className='flex gap-4 m-3'>
