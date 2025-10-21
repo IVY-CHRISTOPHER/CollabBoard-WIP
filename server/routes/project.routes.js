@@ -32,7 +32,7 @@ export default (app) => {
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
         updateProject
     );
-    // Delete a Project
+    //! Delete a Project by ID
     app.delete(
         "/api/project/delete/:id",
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH

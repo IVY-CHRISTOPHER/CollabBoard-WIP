@@ -32,7 +32,7 @@ export default (app) => {
         // authenticate //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
         updateMilestone
     );
-    //! Deletes Milestone
+    //! Delete a Milestone by ID
     app.delete(
         "/api/milestone/delete/:id",
         // authenticate //! Disabled for DEV purposes ENABLE BEFORE LAUNCH

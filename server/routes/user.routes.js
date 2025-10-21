@@ -19,6 +19,6 @@ export default (app) => {
     app.get("/api/user/:id", findOneUser);
     //update a user
     app.patch("/api/update/:id", updateUser);
-    //! Delete a user
+    //! Delete a user by ID
     app.delete("/api/delete/:id", deleteUser);
 };

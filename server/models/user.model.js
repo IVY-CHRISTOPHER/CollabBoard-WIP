@@ -43,6 +43,14 @@ const UserSchema = new Schema(
                 },
             ],
         },
+        assignedTasks: {
+            type: [
+                {
+                    type: ObjectId,
+                    ref: "Task",
+                },
+            ],
+        },
     },
     { timestamps: true }
 );

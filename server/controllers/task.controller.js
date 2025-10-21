@@ -31,3 +31,45 @@ export async function findAllTasks(req, res) {
             });
         });
 }
+
+// Finds a Task by ID
+export async function findTaskById(req, res) {
+    Task.findById(req.params.id)
+        .then((foundTask) => {
+            res.json(foundTask);
+        })
+        .catch((err) => {
+            res.status(400).json({
+                message: "Error finding Task by ID",
+                error: err,
+            });
+        });
+}
+
+// Updates a Task by ID
+export async function updateTaskById(req, res) {
+    Task.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+        .then((updatedTask) => {
+            res.json(updatedTask);
+        })
+        .catch((err) => {
+            res.status(400).json({
+                message: "Error updating Task by ID",
+                error: err,
+            });
+        });
+}
+
+//! Deletes a Task by ID
+export async function deleteTaskById(req, res) {
+    Task.findByIdAndDelete(req.params.id)
+        .then((deletedTask) => {
+            res.json(deletedTask);
+        })
+        .catch((err) => {
+            res.status(400).json({
+                message: "Error deleting Task by ID",
+                error: err,
+            });
+        });
+}

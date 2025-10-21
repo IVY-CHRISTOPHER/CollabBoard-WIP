@@ -12,19 +12,6 @@ const TaskSchema = new Schema(
             type: String,
             minLength: [3, "Description must be at least 3 characters."],
         },
-        //TODO Stretch Goals!
-        //assigns users that have access to the project to this specific  -task
-        // assignment: {
-        //     type: mongoose.ObjectId, ref: "Project_Users"
-        // },
-        //Allows the task creator to upload an image
-        // attachments: [{
-        //     fileName: String,
-        //     url: String,
-        //     mimetype: String,
-        //     size: Number,
-        //     uploadedAt: {type: Date, default: Date.now}
-        // }],
         priority: {
             type: String,
             enum: ["Low", "Medium", "High"],
@@ -38,6 +25,30 @@ const TaskSchema = new Schema(
         milestoneId: {
             type: ObjectId,
             ref: "milestone",
+        },
+        assignedTo: {
+            type: ObjectId,
+            ref: "user",
+            required: [false]
+        },
+        dueDate: {
+            type: Date,
+            required: [true, "Due date is required."]
+        },
+        attachments: {
+            type: [
+                {
+                    fileName: String,
+                    url: String,
+                    mimetype: String,
+                    size: Number,
+                    uploadedAt: { type: Date, default: Date.now },
+                },
+            ],
+        },
+        comments: {
+            type: String,
+            minLength: [3, "Comment must be at least 3 characters."],
         },
     },
     { timestamps: true }
