@@ -15,10 +15,10 @@ const Verification = (props) => {
             verificationCode : ''
         })
 
-        const changeHandler = e => {
-        const {name, value} = e.target
-        setUserData(prev => ({...prev, [name]: value}))
-        validateCode(name, value)
+    const changeHandler = e => {
+    const {name, value} = e.target
+    setUserData(prev => ({...prev, [name]: value}))
+    validateCode(name, value)
     }
 
     const validateCode = (name, value) => {
@@ -26,7 +26,7 @@ const Verification = (props) => {
         verificationCode : value => value.length >= 2 ? true : 'Please use correct code',
     }
 }
-    // Submit Handler
+    // Submit Handler will go here
 
     return (
         <div className='flex h-screen'>

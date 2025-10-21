@@ -10,7 +10,7 @@ import { authenticate } from "../config/jwt.config.js";
 export default (app) => {
     // Route to create Milestone
     app.post(
-        "/api/create",
+        "/api/milestone/create",
         // authenticate, //! Disabled for DEV purposes ENABLE BEFORE LAUNCH
         addMilestone
     );

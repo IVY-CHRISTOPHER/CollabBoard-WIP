@@ -4,13 +4,10 @@ import { userContext } from '../context/userContext';
 import CreateCard from '../components/CreateCard'
 import JoinCard from '../components/JoinCard';
 import axios from 'axios'
-// import { getAllProjects } from '../services/project.services.js'
 
 const UserDashboard = (props) => {
     const { user, setUser } = useContext(userContext)
     const {allProjects, setAllProjects} = useContext(userContext)
-
-    
 
     useEffect(() => {
         axios.get('http://localhost:3000/api/projects', {withCredentials: true})
@@ -18,16 +15,10 @@ const UserDashboard = (props) => {
             .catch(err => console.log(err))
     }, [])
 
-
-
-
+    // go through projects and get only projects from the logged in user
     const userProjects = allProjects.map(project => project.userId == user._id ? project : null).filter(project => project)
     console.log(user)
     console.log(user._id)
-    console.log(user.firstName)
-    console.log(user.lastName)
-    // console.log("line 29", userProjects)
-    // console.log("All Projects", allProjects)
 
     return (
         <div>
@@ -66,7 +57,7 @@ const UserDashboard = (props) => {
                         </div>
                         <div className='flex justify-around w-2/3'>
                             
-                                <CreateCard/>
+                            <CreateCard/>
                             
                             <JoinCard/>
                             

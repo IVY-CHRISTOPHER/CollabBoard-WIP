@@ -36,7 +36,7 @@ const NewPassword = (props) => {
     setUserErrors( prev => ({ ...prev, [name]: validations[name](value)}))
 }
 
-        // Submit handler here
+    // Submit handler will go here
         
     return (
         <div className='flex h-screen'>

@@ -21,6 +21,7 @@ export default {
         'slateGry' : '#6B7280',
         'cadetGry' : '#9CA3AF',
         'shadowGry' : '#404040',
+        'aluminium' : '#AEAEB2',
 
         // Red + Orange
         'strawberry' : '#DC2626',
