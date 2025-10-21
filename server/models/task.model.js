@@ -22,10 +22,16 @@ const TaskSchema = new Schema(
             enum: ["to-do", "in-progress", "done"],
             required: [true],
         },
+        createdBy: {
+            type: ObjectId,
+            ref: "user",
+            required: [true, "Creator information is required."],
+        },
         milestoneId: {
             type: ObjectId,
             ref: "milestone",
         },
+        //! May Change when Multiple Users are Implemented
         assignedTo: {
             type: ObjectId,
             ref: "user",
