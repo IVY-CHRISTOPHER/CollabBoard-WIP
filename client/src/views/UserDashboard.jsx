@@ -44,11 +44,13 @@ const UserDashboard = (props) => {
                                     <tbody > 
                                         {
                                             userProjects.map(project => (
-                                                <tr key={project.id} className='border'>
-                                                    <td>{project.projectName}</td>
-                                                    <td>{project.userId.id}</td>
-                                                    {/* <td>{project.tasks.length}</td> */}
-                                                </tr>
+                                                <Link to={`/project/${project.id}/dashboard`}>
+                                                    <tr key={project.id} className='border'>
+                                                        <td>{project.projectName}</td>
+                                                        <td>{project.userId.id}</td>
+                                                        {/* <td>{project.tasks.length}</td> */}
+                                                    </tr>
+                                                </Link>
                                             ))
                                         }
                                     </tbody>

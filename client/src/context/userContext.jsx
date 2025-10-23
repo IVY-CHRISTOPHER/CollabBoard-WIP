@@ -5,6 +5,7 @@ export const userContext = createContext();
 export const UserProvider = (props) => {
     const [user, setUser] = useState({})
     const [allProjects, setAllProjects] = useState([])
+    const [project, setProject ] = useState([])
     const [milestones, setMilestones] = useState([])
 
     return (
@@ -12,6 +13,7 @@ export const UserProvider = (props) => {
             value ={{
                 user, setUser,
                 allProjects, setAllProjects,
+                project, setProject,
                 milestones, setMilestones,
             }}
         >

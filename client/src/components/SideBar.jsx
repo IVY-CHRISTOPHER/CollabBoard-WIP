@@ -15,7 +15,7 @@ const SideBar = (props) => {
         props.setSidebarOpen(true)
     }
 
-    // Path logic so it doesnt appeat on these routes but it will elsewhere
+    // Path logic so it doesnt appear on these routes but it will elsewhere
     if(
         location.pathname == '/' || 
         location.pathname == '/register' || 
@@ -26,7 +26,7 @@ const SideBar = (props) => {
         location.pathname == '/user/dashboard' ||
         location.pathname == '/project/create' ||
         location.pathname == '/project/join' ||
-        location.pathname == '*'
+        location.pathname == '/error'
     ){
         return (
             null

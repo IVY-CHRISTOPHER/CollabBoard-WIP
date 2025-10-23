@@ -1,12 +1,13 @@
 import React, { useState, useContext } from 'react';
 import { userContext } from '../context/userContext';
 import { useLocation } from 'react-router-dom';
+import Error from '../views/Error';
 
 const NavBar = (props) => {
     const { user, setUser } = useContext(userContext)
     const location = useLocation()
 
-    // Path logic so it doesnt appeat on these routes but it will elsewhere
+    // Path logic so it doesnt appear on these routes but it will elsewhere
     if(
         location.pathname == '/' || 
         location.pathname == '/register' || 
@@ -16,12 +17,13 @@ const NavBar = (props) => {
         location.pathname == '/verification' ||
         location.pathname == '/project/create' ||
         location.pathname == '/project/join' ||
-        location.pathname == '*'
+        location.pathname == '/error'
     ){
         return (
             null
         )
     }
+    
 
     return (
         <nav className={` bg-ghost w-full h-10 flex justify-between `}>

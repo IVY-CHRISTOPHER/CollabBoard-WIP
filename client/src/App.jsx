@@ -1,5 +1,5 @@
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import React, {useState,  useContext} from 'react';
 import SideBar from './components/SideBar'
 import NavBar from './components/NavBar'
@@ -56,7 +56,10 @@ function App() {
 
             {/*Other*/}
             {/* <Route path='/termsOfService' element={<TermsOfService/>}/> */}
-            <Route path='*' element={<Error/>}/>
+
+            {/* this allows the catch all route to still catch any bad routes, and for the nav and sidebar to not appear on the page. */}
+            <Route path='*' element={<Navigate to='/error'/>}/>
+            <Route path='/error' element={<Error/>}/>
 
           </Routes>
         </div>
