@@ -6,3 +6,7 @@ Tailwind notes:
         I have been using custom color names in the tailwind.config.ts file, ive given custom names to each hex code color in the design. I did this because if theres any major color change its easier to do a hex code change than have to find every spot to fix.
         For Black and White those i just use the tailwind base colors for. 
 
+Milestone Card: 
+    The milestone card had to be split into two files, one to map through all the cards and one to just display and flip one card at a time. 
+    This was needed to beable to put flipping the card into state so one card flips at a time instead of all of them flipping. 
+    

@@ -26,7 +26,7 @@ export default {
         // Red + Orange
         'strawberry' : '#DC2626',
         'strawberryLt' : '#F9D4CE',
-        'CoralRed' : '#EF4444',
+        'coralRed' : '#EF4444',
         'maxRed' : '#DC2626',
         'salmon' : '#F28568',
         'mistyRose' : '#FEE2E2' ,
@@ -42,7 +42,7 @@ export default {
         'iceberg' : '#E3ECF5',
 
         // Green
-        'PigmentGreen' : '#16A34A',
+        'pigmentGreen' : '#16A34A',
         'magicMint' : '#BBF7D0',
 
         // Yellow 

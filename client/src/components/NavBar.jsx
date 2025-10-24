@@ -24,7 +24,6 @@ const NavBar = (props) => {
         )
     }
     
-
     return (
         <nav className={` bg-ghost w-full h-10 flex justify-between `}>
             <form className='flex items-center rounded-md  ml-2 ' >

@@ -14,6 +14,7 @@ const MilestoneCards = (props) => {
             .catch(err => console.log(err))
     }, [project_id])
 
+    // get only milestones for displayed project. 
     const projectMilestones = milestones.map(milestone => milestone.projectId == project_id ? milestone : null).filter(milestone => milestone)
 
     return (
