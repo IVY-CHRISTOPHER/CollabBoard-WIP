@@ -3,15 +3,18 @@ import { userContext } from '../context/userContext'
 import { useNavigate, useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
+const user = {id: '1' , firstName: 'First', lastName: 'last'}
+
 const TaskCreate = (props) => {
     const navigate = useNavigate()
     const {project_id, milestone_id} = useParams()
-    const {user, setUser} = useContext(userContext)
+    // const {user, setUser} = useContext(userContext)
     const {milestone, setMilestone} = useContext(userContext)
     const [allUsers, setAllUsers] = useState([])
     const [task, setTask] = useState({
         taskName : '',
         description : '',
+        createdBy : [user.firstName + ' ' + user.lastName],
         priority : '',
         status : '',
         assignedTo : '',
@@ -94,11 +97,20 @@ const TaskCreate = (props) => {
                     <div className='flex justify-around'>
 
                         <div className='flex flex-col'>
-                            <p className='flex text-cadetGry'>
+                            <label  className='flex text-cadetGry'>
                                 <img src="\src\assets\UserIcon.svg" alt="User Icon" />
                                 Created By:
-                            </p>
-                            <p className='text-black'>{user.firstName} {user.lastName}</p>
+                            </label>
+
+                            <input 
+                                type="text" 
+                                name="createdBy" 
+                                id="createdBy"
+                                value={task.createdBy}
+                                onChange={changeHandler}
+                                className='block text-black'
+                                readOnly
+                            />
                         </div>
                         
                         <div>
