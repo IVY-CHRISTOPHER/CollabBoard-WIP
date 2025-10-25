@@ -71,7 +71,7 @@ const TaskUpdate = (props) => {
         <div className='flex w-full h-full justify-center items-center '>
             <div className='w-3/4' >
 
-                <h1 className='font-bold text-xl'>Create Task</h1>
+                <h1 className='font-bold text-xl'>Update Task</h1>
                 
                 <form onSubmit={submitHandler} className='w-full'>
 
