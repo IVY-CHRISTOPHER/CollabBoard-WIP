@@ -16,6 +16,7 @@ import JoinProject from './components/JoinProject'
 import ProjectDashboard from './views/ProjectDashboard'
 import CreateMilestone from './components/CreateMilestone'
 import TaskCreate from './components/TaskCreate';
+import TaskUpdate from './components/TaskUpdate';
 
 function App() {
       const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -52,7 +53,7 @@ function App() {
 
             {/* Tasks (sub-task) */}
             <Route path='/project/:project_id/milestone/:milestone_id/task/create' element={<TaskCreate/>} />
-            {/* <Route path='/project/:project_id/milestone/:milestone_id/task/update/:task_id' element={<UpdateTask/>}/> */}
+            <Route path='/project/:project_id/milestone/:milestone_id/task/update/:task_id' element={<TaskUpdate/>}/>
             {/* <Route path='/project/:project_id/milestone/:milestone_id/task/:task_id' element={<TaskDetails/>}/> */}
 
             {/*Other*/}
