@@ -3,6 +3,7 @@ import React, {useState,  useContext, useEffect} from 'react';
 import MilestoneCards from '../components/MilestoneCards';
 import ProgressTiles from '../components/ProgressTiles';
 import { userContext } from '../context/userContext';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const ProjectDashboard = (props) => {
     const { project_id } = useParams()

@@ -1,6 +1,11 @@
 Left off: 
+    1. Still need to add task logic to the ProgressTiles, and the SideBar page, the numbers dont currently show anything. 
+    2. Add a logout Drop down to the NavBar.
+    3. finish fine styling to task component pages.
+    4. Add delete button to Update form and details page. 
+    5. Forgot password pages still need logic for verification codes and sending emails. 
 
-
+     
 Tailwind notes: 
     Colors: 
         I have been using custom color names in the tailwind.config.ts file, ive given custom names to each hex code color in the design. I did this because if theres any major color change its easier to do a hex code change than have to find every spot to fix.
@@ -9,4 +14,7 @@ Tailwind notes:
 Milestone Card: 
     The milestone card had to be split into two files, one to map through all the cards and one to just display and flip one card at a time. 
     This was needed to beable to put flipping the card into state so one card flips at a time instead of all of them flipping. 
-    
+
+Format date: 
+    I did a general format to be stored in the database, then gave the option of 2 display formats one with the year and one without. 
+

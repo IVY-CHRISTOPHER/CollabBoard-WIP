@@ -30,6 +30,7 @@ export default {
         'maxRed' : '#DC2626',
         'salmon' : '#F28568',
         'mistyRose' : '#FEE2E2' ,
+        'faluRed' : '#7F1D1D',
 
         // Blue
         'linksBlu' : '#2A76F4',
@@ -40,13 +41,17 @@ export default {
         'cobaltBluLt' : '#83A7E2',
         'squidInk' : '#122035',
         'iceberg' : '#E3ECF5',
+        'paleAqua' : '#D1E5FF',
+        'yaleBlue' : '#014094',
 
         // Green
         'pigmentGreen' : '#16A34A',
         'magicMint' : '#BBF7D0',
+        'parsley' : '#14532D',
 
         // Yellow 
         'lemonLt' : '#FEF3C7',
+        'peanut' : '#78350F',
 
       },
     },

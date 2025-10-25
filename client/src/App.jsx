@@ -18,6 +18,7 @@ import CreateMilestone from './components/CreateMilestone'
 import TaskCreate from './components/TaskCreate';
 import TaskUpdate from './components/TaskUpdate';
 import TaskDetails from './components/TaskDetails';
+import TaskTable from './components/TaskTable';
 
 function App() {
       const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -50,7 +51,7 @@ function App() {
 
             {/* Milestone (main task) */}
             <Route path='/project/:project_id/milestone/create' element={<CreateMilestone/>}/>
-            {/* <Route path='/project/:project_id/milestone/:milestone_id' element={<MilestoneView/>}/> */}
+            <Route path='/project/:project_id/milestone/:milestone_id' element={<TaskTable/>}/>
 
             {/* Tasks (sub-task) */}
             <Route path='/project/:project_id/milestone/:milestone_id/task/create' element={<TaskCreate/>} />

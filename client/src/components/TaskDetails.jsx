@@ -5,7 +5,6 @@ import axios from 'axios'
 import { formatDate, MonthDayFormat, monthDayYearFormat } from '../util/formatDate'
 
 const TaskDetails = (props) => {
-    const navigate = useNavigate()
     const { project_id, milestone_id, task_id } = useParams()
     const { user, setUser } = useContext(userContext)
     const { milestone, setMilestone } = useContext(userContext)

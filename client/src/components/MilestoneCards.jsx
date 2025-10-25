@@ -23,10 +23,12 @@ const MilestoneCards = (props) => {
 
                     {
                     projectMilestones.map(milestone => (
-                        <SingleMilestoneCard
-                            key={milestone.id}
-                            milestone={milestone}
-                        />
+                        <Link to={`/project/${project_id}/milestone/${milestone.id}`}>
+                            <SingleMilestoneCard
+                                key={milestone.id}
+                                milestone={milestone}
+                                />
+                        </Link>
                     ))
                     }
                 

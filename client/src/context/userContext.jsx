@@ -4,11 +4,11 @@ export const userContext = createContext();
 
 export const UserProvider = (props) => {
     const [user, setUser] = useState({})
-    const [allProjects, setAllProjects] = useState([])
+    const [allProjects, setAllProjects] = useState({})
     const [project, setProject ] = useState({})
-    const [milestones, setMilestones] = useState([])
+    const [milestones, setMilestones] = useState({})
     const [milestone, setMilestone] = useState({})
-    const [tasks, setTasks] = useState([])
+    const [tasks, setTasks] = useState({})
     const [task, setTask] = useState({})
 
     return (
