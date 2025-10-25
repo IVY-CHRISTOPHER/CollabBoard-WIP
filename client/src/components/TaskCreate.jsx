@@ -3,12 +3,10 @@ import { userContext } from '../context/userContext'
 import { useNavigate, useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
-const user = {id: '1' , firstName: 'First', lastName: 'last'}
-
 const TaskCreate = (props) => {
     const navigate = useNavigate()
     const {project_id, milestone_id} = useParams()
-    // const {user, setUser} = useContext(userContext)
+    const {user, setUser} = useContext(userContext)
     const {milestone, setMilestone} = useContext(userContext)
     const [allUsers, setAllUsers] = useState([])
     const [task, setTask] = useState({
