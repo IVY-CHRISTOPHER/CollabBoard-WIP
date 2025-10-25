@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react'
 import { userContext } from '../context/userContext'
 import { useNavigate, useParams, Link } from 'react-router-dom'
 import axios from 'axios'
+import { formatDate } from '../util/formatDate'
 
 const TaskUpdate = (props) => {
     const navigate = useNavigate()
@@ -136,6 +137,7 @@ const TaskUpdate = (props) => {
                                 type="date" 
                                 name="dueDate" 
                                 id="dueDate" 
+                                value={formatDate(task.dueDate)}
                                 onChange={changeHandler}
                                 className='block text-black border-2 border-mist rounded-md'
                                 />
